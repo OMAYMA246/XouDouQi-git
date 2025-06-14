@@ -1,0 +1,16 @@
+jeu\Panthere.class
+jeu\Authentification.class
+jeu\Loup.class
+jeu\Info.class
+jeu\Chien.class
+jeu\Tigre.class
+jeu\Animal.class
+jeu\Joueur.class
+jeu\DatabaseConnection.class
+jeu\Plateau.class
+jeu\Chat.class
+jeu\Lion.class
+jeu\Rat.class
+jeu\Elephant.class
+jeu\Jeu.class
+jeu\Main.class

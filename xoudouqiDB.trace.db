@@ -1,0 +1,33 @@
+2025-06-13 18:37:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "ADVERSAIRE" non trouvée
+Column "ADVERSAIRE" not found; SQL statement:
+SELECT * FROM joueurs WHERE (nom = ? AND adversaire = ?) OR (nom = ? AND adversaire = ?) ORDER BY datejeu DESC [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:139)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:137)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:136)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at jeu.DatabaseConnection.getHistoriqueEntreJoueurs(DatabaseConnection.java:95)
+	at jeu.Main.main(Main.java:43)
+2025-06-13 18:48:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PARTIES" non trouvée
+Table "PARTIES" not found; SQL statement:
+SELECT * FROM parties WHERE (joueur1 = ? AND joueur2 = ?) OR (joueur1 = ? AND joueur2 = ?) ORDER BY datejeu DESC [42102-214]
+2025-06-13 18:52:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PARTIES" non trouvée
+Table "PARTIES" not found; SQL statement:
+SELECT * FROM parties WHERE (joueur1 = ? AND joueur2 = ?) OR (joueur1 = ? AND joueur2 = ?) ORDER BY datejeu DESC [42102-214]
